@@ -22,7 +22,7 @@ ADD scripts/spark-shell.sh  /spark-shell.sh
 ADD scripts/spark-defaults.conf /spark-defaults.conf
 ADD scripts/remove_alias.sh /remove_alias.sh
 ADD scripts/docker-run-spark-env.sh /usr/local/bin/docker-run-spark-env.sh
-ADD script-runner.sh /usr/local/bin/script-runner.sh
+ADD scripts/script-runner.sh /usr/local/bin/script-runner.sh
 
 ENV SPARK_HOME /usr/local/spark
 
