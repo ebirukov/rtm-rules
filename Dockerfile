@@ -7,7 +7,7 @@ RUN \
 	&& ln -s spark-1.6.0-bin-hadoop2.4 spark
 
 RUN \
-	curl -s http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar -o usr/local/spark/lib/mysql-connector-java-5.1.38.jar \
+	curl -s http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar -o /usr/local/spark/lib/mysql-connector-java-5.1.38.jar \
 	&& curl -s http://central.maven.org/maven2/com/databricks/spark-csv_2.11/1.3.0/spark-csv_2.11-1.3.0.jar -o /usr/local/spark/lib/spark-csv_2.11-1.3.0.jar \
 	&& curl -s http://central.maven.org/maven2/org/apache/commons/commons-csv/1.2/commons-csv-1.2.jar -o /usr/local/spark/lib/commons-csv-1.2.jar \
 	&& curl -s https://s3.amazonaws.com/redshift-downloads/drivers/RedshiftJDBC41-1.1.10.1010.jar -o /usr/local/spark/lib/RedshiftJDBC41-1.1.10.1010.jar \
