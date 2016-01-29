@@ -30,6 +30,10 @@ RUN apt-get update \
 
 ENV SPARK_HOME /usr/local/spark
 
+ENV SPARK_DRIVER_CLASSPATH="/usr/local/spark/lib/mysql-connector-java.jar"
+
+ENV SPARK_JARS="/usr/local/spark/lib/spark-avro.jar,/usr/local/spark/lib/spark-redshift.jar,/usr/local/spark/lib/spark-csv_2.11-1.3.0.jar,/usr/local/spark/lib/commons-csv-1.2.jar,/usr/local/spark/lib/RedshiftJDBC41-1.1.10.1010.jar,/usr/local/spark/lib/spark-streaming-kinesis-asl.jar"
+
 ENV SPARK_MASTER_OPTS="-Dspark.driver.port=7001 -Dspark.fileserver.port=7002 -Dspark.broadcast.port=7003 -Dspark.replClassServer.port=7004 -Dspark.blockManager.port=7005 -Dspark.executor.port=7006 -Dspark.ui.port=4040 -Dspark.broadcast.factory=org.apache.spark.broadcast.HttpBroadcastFactory"
 ENV SPARK_WORKER_OPTS="-Dspark.driver.port=7001 -Dspark.fileserver.port=7002 -Dspark.broadcast.port=7003 -Dspark.replClassServer.port=7004 -Dspark.blockManager.port=7005 -Dspark.executor.port=7006 -Dspark.ui.port=4040 -Dspark.broadcast.factory=org.apache.spark.broadcast.HttpBroadcastFactory"
 
