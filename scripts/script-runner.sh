@@ -6,6 +6,7 @@ if aws s3 cp $1 $file ; then
 chmod +x $file
 
 docker-run-spark-env.sh $SPARK_HOME/bin/spark-submit \
+--master local[*] \
 --driver-memory $DRIVER_MEMORY \
 --driver-class-path $SPARK_DRIVER_CLASSPATH \
 --jars $SPARK_JARS \
