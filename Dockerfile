@@ -8,7 +8,7 @@ RUN \
 
 RUN \
 	curl -s http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar -o /usr/local/spark/lib/mysql-connector-java.jar \
-	&& curl -s http://central.maven.org/maven2/org/apache/spark/spark-streaming-kinesis-asl-assembly_2.11/1.6.0/spark-streaming-kinesis-asl-assembly_2.11-1.6.0.jar -o /usr/local/spark/lib/spark-streaming-kinesis-asl.jar
+	&& curl -s http://central.maven.org/maven2/org/apache/spark/spark-streaming-kinesis-asl_2.11/1.6.0/spark-streaming-kinesis-asl_2.11-1.6.0.jar -o /usr/local/spark/lib/spark-streaming-kinesis-asl.jar
 
 ADD scripts/start-master.sh /start-master.sh
 ADD scripts/start-worker /start-worker.sh
@@ -35,4 +35,5 @@ ENV DRIVER_MEMORY 1G
 
 EXPOSE 8080 7077 8888 8081 4040 7001 7002 7003 7004 7005 7006
 
+WORKDIR /usr/local/bin
 ENTRYPOINT ["bash"]
