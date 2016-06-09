@@ -13,7 +13,7 @@ RUN \
 ADD scripts/start-master.sh /start-master.sh
 ADD scripts/start-worker /start-worker.sh
 ADD scripts/spark-shell.sh  /spark-shell.sh
-ADD scripts/spark-defaults.conf /spark-defaults.conf
+ADD scripts/spark-defaults.conf /usr/local/spark/conf/spark-defaults.conf
 ADD scripts/remove_alias.sh /remove_alias.sh
 ADD scripts/docker-run-spark-env.sh /usr/local/bin/docker-run-spark-env.sh
 ADD scripts/script-runner.sh /usr/local/bin/script-runner.sh
